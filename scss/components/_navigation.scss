@@ -1,0 +1,104 @@
+/* ---------------
+TOP NAVIGATION
+---------------*/
+
+.logo {
+  float: right;
+  font-size: 17px;
+}
+
+.user {
+  font-size: 14px;
+  display: none;
+  @media screen and (min-width:  768px){
+    display: inline-block;
+  }
+}
+
+.topnav {
+  overflow: hidden;
+  background-color: $primary-color-dark;
+  position: fixed;
+  top: 0;
+  height: 65px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  @media screen and (min-width:  768px){
+    justify-content: space-between;
+  }
+}
+
+.topnav-right {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding: 0 20px 0 0;
+  @media screen and (min-width:  768px){
+    justify-content: space-between;
+  }
+}
+
+.sidenav a,
+.topnav a {
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+/* ---------------
+SIDE-BOTTOM NAVIGATION
+---------------*/
+
+.sidenav {
+  overflow: hidden;
+  background-color: $primary-color;
+  position: fixed;
+  height: 65px;
+  bottom: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  z-index: 100;
+  @media screen and (min-width:  768px){
+    justify-content: flex-start;
+    flex-direction: column;
+    top: 65px;
+    height: 100%;
+    width: 65px;
+    z-index: 100;
+  }
+}
+
+// .sidenav a:active,
+// .sidenav a:focus {
+//   opacity: 1;
+//   transition-duration: 0.3s;
+//   @media screen and (min-width:  768px){
+//     border-left: 4px solid $color-notification-orange;
+//     border-radius: 5px;
+//   }
+// }
+
+.current {
+  transition-duration: 0.3s;
+  @media screen and (min-width:  768px){
+    border-left: 4px solid $color-notification-orange;
+    border-radius: 5px;
+  }
+}
+
+.nocurrent {
+  opacity: 0.5;
+  transition: 0.3s;
+}
+
+.sidenav a {
+  @media screen and (min-width:  768px){
+    justify-content: flex-start;
+    padding: 20px;
+  }
+}
