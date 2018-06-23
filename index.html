@@ -385,7 +385,7 @@
           </div>
           <div class="two-col settings">
             <h2>Settings</h2>
-            <form>
+            <form id="settings">
               <table class="users" width="100%">
                 <tr>
                   <td width="70%"><span>Receive email notifications</span></td>
@@ -432,7 +432,7 @@
                 <option value="UTC-10+">UTC+10: Chamorro Standard Time</option>
                 <option value="UTC-12+">UTC+12: Wake Island Time Zone</option>
               </select>
-              <button type="submit" class="save">Save</button>
+              <button type="submit" class="save" id="saveForm">Save</button>
               <button type="reset" class="button2">Restore default settings</button>
             </form>
           </div>
@@ -440,6 +440,7 @@
 
         </div>
         <script src="js/Chart.js"></script>
+        <script src="js/jquery.js"></script>
         <script src="js/main.js"></script>
     </body>
 </html>

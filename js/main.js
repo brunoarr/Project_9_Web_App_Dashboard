@@ -58,7 +58,7 @@ new Chart(document.getElementById("dailyTraffic"), {
     data: {
     labels: ["MON","TUE","WED","THU","FRI","SAT","SUN"],
     datasets: [{
-        data: [60,100,170,125,225,200,100],
+        data: [170,210,280,235,235,310,210],
         backgroundColor: ["#4863A0","#4863A0","#4863A0","#4863A0","#4863A0","#8EA9E6","#8EA9E6"],
       }]
     },
@@ -145,3 +145,47 @@ function successmessage() {
          document.getElementsByClassName("success-message")[0].innerHTML="";
     },2000);
 }
+
+// LOCAL STORAGE
+
+// if (localStorage) {
+// 	// Browser supports it
+// 	// DOM Ready
+// 	$(function() {
+// 		// Insert new buttons (you'd probably not ACTUALLY use buttons, instead saving on blurs or every x seconds)
+// 		$("#saveForm")
+// 			.after("<input type='submit' value='Save Form' id='saveData'>")
+// 			.after("<input type='submit' value='Clear Saved Data' id='clearData'>");
+// 		$("#saveData")
+// 			.click(function(e) {
+// 				// Don't actually submit form
+// 				e.preventDefault();
+// 				// Bit of generic data to test if saved data exists on page load
+// 				localStorage.setItem("flag", "set");
+// 				// serializeArray is awesome and powerful
+// 				var data = $("#settings").serializeArray();
+// 				// iterate over results
+// 				$.each(data, function(i, obj) {
+// 					// HTML5 magic!!
+// 					localStorage.setItem(obj.name, obj.value);
+// 				});
+// 			});
+// 		// Test if there is already saved data
+// 		if (localStorage.getItem("flag") == "set") {
+// 			// Tell the user
+// 			$("header").before("<p id='message'>This form has saved data!</p>");
+// 			// Same iteration stuff as before
+// 			var data = $("#settings").serializeArray();
+// 			// Only the only way we can select is by the name attribute, but jQuery is down with that.
+// 			$.each(data, function(i, obj) {
+// 				$("[name='" + obj.name +"']").val(localStorage.getItem(obj.name));
+// 			});
+// 		}
+// 		// Provide mechanism to remove data. You'd probably actually remove it not just kill the flag
+// 		$("#clearData")
+// 			.click(function(e) {
+// 				e.preventDefault();
+// 				localStorage.setItem("flag", "");
+// 			});
+// 	});
+// }
