@@ -98,11 +98,11 @@ label {
 }
 
 input:checked + .slider {
-  background-color: $color-notification-green;
+  background-color: $color-notification-orange;
 }
 
 input:focus + .slider {
-  box-shadow: 0 0 1px $color-notification-green;
+  box-shadow: 0 0 1px $color-notification-orange;
 }
 
 input:checked + .slider:before {

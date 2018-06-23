@@ -89,7 +89,7 @@ new Chart(document.getElementById("mobileChart"), {
       datasets: [
         {
           label: "Mobile Users",
-          backgroundColor: ["#8EA9E6", "#4863A0","#FF862B"],
+          backgroundColor: ["#4863A0","#FF862B","#8EA9E6"],
           data: [73,6,21]
         }
       ]
