@@ -377,6 +377,10 @@ p {
   color: #4E4E4E;
   font-size: 12px; }
 
+header {
+  position: relative;
+  z-index: 100; }
+
 footer {
   width: 100%;
   padding: 10px; }
@@ -445,6 +449,11 @@ button:hover {
   padding: 10px 0px; }
 
 .success-message {
+  font-size: 14px;
+  color: #52D017;
+  transition: 0.3s; }
+
+#success-message {
   font-size: 14px;
   color: #52D017;
   transition: 0.3s; }

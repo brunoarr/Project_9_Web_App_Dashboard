@@ -115,34 +115,52 @@ new Chart(document.getElementById("mobileChart"), {
 
 // SUCCESS MESSAGE
 
-let send = document.getElementsByClassName("send")[0];
+let send = document.getElementById("message-form");
+send.addEventListener("submit", successmessage);
 
-send.addEventListener("onsubmit", successmessage);
-
-function successmessage() {
+function successmessage(e) {
+    e.preventDefault();
     var p = document.createElement("P");
-    p.className = "success-message";
+    p.id = "success-message";
     var t = document.createTextNode("Your message was sent successfully!");
     p.appendChild(t);
     document.body.appendChild(p);
-    document.getElementsByClassName("message-user")[0].appendChild(p);
+    document.getElementById("message-form").appendChild(p);
+    setTimeout(function(){
+      //document.getElementById("success-message").innerHTML="";
+      //var element = document.getElementById("success-message");
+      $("#success-message").remove();
+    },2000);
 }
+
+// function successmessage(e) {
+//     e.preventDefault();
+//     var p = document.createElement("P");
+//     p.className = "success-message";
+//     var t = document.createTextNode("Your message was sent successfully!");
+//     p.appendChild(t);
+//     document.body.appendChild(p);
+//     document.getElementsByClassName("message-user")[0].appendChild(p);
+//     setTimeout(function(){
+//       document.getElementsByClassName("success-message")[0].innerHTML="";
+//     },2000);
+// }
 
 // SAVE MESSAGE
 
-let save = document.getElementsByClassName("save")[0];
+let save = document.getElementById("settings");
+save.addEventListener("submit", successmessage2);
 
-save.addEventListener("click", successmessage);
-
-function successmessage() {
+function successmessage2(e) {
+    e.preventDefault();
     var p = document.createElement("P");
-    p.className = "success-message";
+    p.id = "success-message";
     var t = document.createTextNode("Saved correctly");
     p.appendChild(t);
     document.body.appendChild(p);
-    document.getElementsByClassName("settings")[0].appendChild(p);
+    document.getElementById("settings").appendChild(p);
     setTimeout(function(){
-         document.getElementsByClassName("success-message")[0].innerHTML="";
+         $("#success-message").remove();;
     },2000);
 }
 
